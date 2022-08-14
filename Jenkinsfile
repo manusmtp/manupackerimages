@@ -12,7 +12,7 @@ environment{
       steps {
         sh """
         cd pack
-        packer build awspack.json
+        packer build aw34343spack.json
         """
       }
     }
