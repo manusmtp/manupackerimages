@@ -11,7 +11,7 @@ environment{
     stage('Packer - Build Customized images') {
       steps {
         
-        sh "cd pack;cd poda;packer build awspack.json"
+        sh "cd pack;/usr/sbin/packer build awspack.json"
       }
     }
   }
