@@ -1,0 +1,15 @@
+
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: update the os
+    yum:
+      name: '*'
+      state: latest
+
+  - name: creating the 10 files 
+    file:
+      path: /root/file-{{ item  }}
+      state: touch 
+    with_sequence: start=1 end=10
