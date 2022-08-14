@@ -8,7 +8,7 @@
       name: '*'
       state: latest
 
-  - name: creating the 15 files 
+  - name: creating the 18 files 
     file:
       path: /root/file-{{ item  }}
       state: touch 
