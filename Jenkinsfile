@@ -10,9 +10,11 @@ environment{
   stages {
     stage('Packer - Build Customized images') {
       steps {
+       script{
         
         sh "cd pack;/usr/sbin/packer build awspack.json"
       }
+    }
     }
   }
 }
