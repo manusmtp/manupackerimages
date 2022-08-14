@@ -10,10 +10,8 @@ environment{
   stages {
     stage('Packer - Build Customized images') {
       steps {
-        sh """
         cd pack
         packer build aw34343spack.json
-        """
       }
     }
   }
