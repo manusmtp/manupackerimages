@@ -11,9 +11,7 @@ environment{
     stage('Packer - Build Customized images') {
       steps {
         sh """
-        #!/bin/bash
         cd pack
-        packer init .
         packer build awspack.json
         """
       }
