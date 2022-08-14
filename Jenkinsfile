@@ -12,7 +12,7 @@ environment{
       steps {
        script{
         
-        sh "cd pack;/usr/sbin/packer build awspack.json"
+        sh "cd pack;/usr/bin/packer build awspack.json"
       }
     }
     }
