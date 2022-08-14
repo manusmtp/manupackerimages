@@ -18,7 +18,7 @@ environment{
         #!/bin/bash
         cd pack
         packer init .
-        packer build awsuiwuewpack.json 
+        packer build awspack.json
         """
       }
     }
