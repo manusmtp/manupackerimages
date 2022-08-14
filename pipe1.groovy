@@ -1,11 +1,16 @@
 pipeline {
   agent any
 
-  environment {
-        aws_access_key_id     = credentials('aws_access_key_id')
-        aws_secret_access_key = credentials('secret_key')
-    }
+parameters{
+password(name: 'AKEY', defaultValue: 'SECRET', description: 'Enter A key')
+password(name: 'SKEY', defaultValue: 'SECRET', description: 'Enter SKEY ')
+}
 
+environment{
+   aws_access_key_id = "${params.AKEY}"
+   aws_secret_access_key = "${params.SKEY}"  
+   
+}
   stages {
     stage('Packer - Build Customized images') {
       steps {
